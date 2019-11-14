@@ -35,17 +35,17 @@
     <form class="page-main__form form" action="https://echo.htmlacademy.ru" method="get">
       <fieldset class="form__fieldset">
         <legend class="visually-hidden">Данные кота</legend>
-        <p class="form__p">
+        <p class="form__line">
           <label class="form__label" for="cat-name">Имя:<sup>*</sup></label>
           <input class="form__input" id="cat-name" type="text" name="cat-name" placeholder="Барсик">
         </p>
-        <p class="form__p">
+        <p class="form__line">
           <label class="form__label" for="cat-weight">Вес (кг):<sup>*</sup></label>
-          <input class="form__input" id="cat-weight" type="text" name="cat-weight" placeholder="7">
+          <input class="form__input" id="cat-weight" type="number" name="cat-weight" placeholder="7" min="1">
         </p>
-        <p class="form__p">
+        <p class="form__line">
           <label class="form__label" for="cat-age">Возраст (лет):</label>
-          <input class="form__input" id="cat-age" type="text" name="cat-age" placeholder="7">
+          <input class="form__input" id="cat-age" type="number" name="cat-age" placeholder="7" min="0">
         </p>
       </fieldset>
       <fieldset class="form__fieldset">
