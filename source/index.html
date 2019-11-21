@@ -4,17 +4,18 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
 
   <header class="page-header">
     <a class="page-header__logo">
-      <img class="page-header__logo-img" src="img/logo-mobile-header.svg" width="191" height="39"
+      <img class="page-header__logo-img" src="img/logo-mobile.svg" width="191" height="39"
         alt="Логотип магазин Cat Energy">
     </a>
     <nav class="main-nav">
-      <button class="page-header__toggle" type="button">Открыть меню</button>
+      <button class="main-nav__toggle" type="button">Открыть меню</button>
       <ul class="main-nav__list site-list">
         <li class="site-list__item">
           <a>Главная</a>
@@ -35,9 +36,9 @@
     <section class="banner">
       <h2 class="banner__title">Функциональное питание для котов</h2>
       <p class="banner__slogan">Занялся собой? Займись котом!</p>
-      <img class="banner__img" src="img/index-can-mobile.png" width="280" height="270"
+      <img class="banner__img" src="img/index-can-mobile@1x.png" width="280" height="270"
         alt="Фото продукта Cat Energy PRO 500г в упаковке">
-      <a class="banner__link button-green" href="form.html">Подобрать программу</a>
+      <a class="banner__link button button--green" href="form.html">Подобрать программу</a>
     </section>
 
     <section class="categories">
@@ -62,8 +63,7 @@
       <h2 class="description-product__title">Как это работает</h2>
       <ul class="description-product__list">
         <li class="description-product__item">Функциональное питание содержит только полезные питательные вещества.</li>
-        <li class="description-product__item">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
-        </li>
+        <li class="description-product__item">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</li>
         <li class="description-product__item">Замените один-два приема обычной еды на наше функциональное питание.</li>
         <li class="description-product__item">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</li>
       </ul>
@@ -113,14 +113,17 @@
       <h2 class="visually-hidden">О компании</h2>
       <div class="about-company__contact contact">
         <p class="contact__slogan">Приглашаем к сотрудничеству дилеров!</p>
-        <p class="contact__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        <p class="contact__address">ул. Большая Конюшенная, д. 19/8, Санкт-Петербург</p>
       </div>
-      <iframe class="about-company__map"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253056745!2d30.32085335164214!3d59.93871916896525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1573659100737!5m2!1sru!2sru"
-        width="320" height="362" style="border:0;" allowfullscreen=""></iframe>
+      <div class="about-company__map map">
+        <iframe class="map__google"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253056745!2d30.32085335164214!3d59.93871916896525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1573659100737!5m2!1sru!2sru"
+          width="320" height="362" style="border:0;" allowfullscreen=""></iframe>
+        <img class="map__img" src="img/bg-map-mobile@1x.png" width="320" height="400" alt="Карта, адрес магазина: ул. Большая Конюшенная, д. 19/8, Санкт-Петербург ">
+      </div>
     </section>
     <a class="page-footer__logo">
-      <img class="page-footer__logo-img" src="img/footer-logo.svg" width="128" height="24"
+      <img class="page-footer__logo-img" src="img/logo-footer.svg" width="128" height="24"
         alt="Логотип магазин Cat Energy">
     </a>
     <div class="page-footer__social social">
