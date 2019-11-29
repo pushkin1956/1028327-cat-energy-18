@@ -1,5 +1,7 @@
 .contact {
-  padding: 33px 25px 28px 19px;
+  display: flex;
+  justify-content: space-between;
+  padding: 33px 20px 28px 20px;
 
   font-family: @font-text;
   font-size: 14px;
@@ -13,6 +15,7 @@
 }
 
 .contact__slogan {
+  width: 125px;
   margin: 0;
 
   font-family: @font-deafult;
@@ -24,5 +27,20 @@
 }
 
 .contact__address {
+  width: 140px;
   margin: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .contact {
+    padding: 69px 72px 62px 71px;
+  }
+}
+
+
+@media (min-width: @desktop-width) {
+  .contact {
+    width: 570px;
+    padding: 69px 76px 62px 76px;
+  }
 }

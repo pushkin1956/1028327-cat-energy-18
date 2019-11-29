@@ -1,5 +1,6 @@
 .page-header {
-
+  width: @mobile-width;
+  margin: 0 auto;
 }
 
 .page-header__logo {
@@ -8,4 +9,20 @@
 
 .page-header__logo-img {
 
+}
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    display: flex;
+    justify-content: space-between;
+    width: @tablet-width;
+    padding: 24px 31px 0 29px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header {
+    width: @desktop-width;
+    padding: 0 40px;
+  }
 }

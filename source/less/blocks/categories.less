@@ -1,4 +1,9 @@
 .categories {
+  width: @mobile-width;
+  margin: 0 auto;
+  margin-bottom: 32px;
+  padding: 0 20px;
+
   font-family: @font-text;
   font-size: 14px;
   line-height: 18px;
@@ -17,6 +22,10 @@
   padding: 24px 36px 22px 21px;
 
   background-color: @bg-color;
+}
+
+.categories__item:last-child {
+  margin-bottom: 0;
 }
 
 .categories__title {
@@ -44,3 +53,29 @@
   text-decoration: none;
 }
 
+@media (min-width: @tablet-width) {
+  .categories {
+    width: @tablet-width;
+    margin-bottom: 51px;
+    padding: 0 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .categories {
+    width: @desktop-width;
+    margin-bottom: 79px;
+    padding: 0 40px;
+  }
+
+  .categories__list {
+    display: flex;
+    justify-content: space-between;
+    width: 1220px;
+  }
+
+  .categories__item {
+    width: 570px;
+    margin-bottom: 0;
+  }
+}

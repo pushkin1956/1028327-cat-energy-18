@@ -9,3 +9,23 @@
 .about-company__map {
 
 }
+
+@media (min-width: @tablet-width) {
+  .about-company {
+    width: @tablet-width;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .about-company {
+    position: relative;
+
+    width: @desktop-width;
+  }
+
+  .about-company__contact {
+    position: absolute;
+    top: 95px;
+    left: 110px;
+  }
+}
