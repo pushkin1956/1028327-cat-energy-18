@@ -1,4 +1,6 @@
 .show-all-block {
+  padding: 0 27px 25px 20px;
+
   font-family: @font-text;
   font-size: 12px;
   line-height: 16px;
@@ -23,3 +25,16 @@
   // margin: 0;
 }
 
+@media (min-width: @tablet-width) {
+  .show-all-block {
+    width: 324px;
+    padding: 55px 37px 40px 38px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .show-all-block {
+    width: 245px;
+    padding: 55px 38px 40px 38px;
+  }
+}
