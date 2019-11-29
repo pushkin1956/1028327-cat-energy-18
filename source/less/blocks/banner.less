@@ -1,5 +1,5 @@
 .banner {
-  padding: 29px 0px 22px 0px;
+  padding: 29px 0 22px 0;
 
   font-family: @font-deafult;
   font-size: 14px;
@@ -11,7 +11,7 @@
 
   background-image:
     url("../img/index-background-mobile@1x.jpg"),
-    linear-gradient(@banner-color 0px, @banner-color 305px, transparent 305px);
+    linear-gradient(@banner-color 0, @banner-color 305px, transparent 305px);
   background-repeat: no-repeat;
   background-position: center top;
 }
@@ -48,7 +48,7 @@
 }
 
 @media (min-width: @tablet-width) {
-  .banner  {
+  .banner {
     position: relative;
 
     margin: 0 auto;
@@ -97,7 +97,7 @@
 }
 
 @media (min-width: @desktop-width) {
-  .banner  {
+  .banner {
     margin: 0 auto;
     margin-bottom: 135px;
     padding: 100px 193px 188px 193px;
