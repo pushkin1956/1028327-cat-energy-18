@@ -1,8 +1,6 @@
 .description-product {
-  width: @mobile-width;
-  margin: 0 auto;
+  .wrapper();
   margin-bottom: 42px;
-  padding: 0 20px;
 
   font-family: @font-text;
   font-size: 14px;
@@ -29,9 +27,7 @@
 
 @media (min-width: @tablet-width) {
   .description-product {
-    width: @tablet-width;
     margin-bottom: 11px;
-    padding: 0 30px;
   }
 
   .description-product__title {
@@ -53,9 +49,7 @@
 
 @media (min-width: @desktop-width) {
   .description-product {
-    width: @desktop-width;
     margin-bottom: 0;
-    padding: 0 40px;
   }
 
   .description-product__item {

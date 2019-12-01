@@ -1,8 +1,6 @@
 .categories {
-  width: @mobile-width;
-  margin: 0 auto;
+  .wrapper();
   margin-bottom: 32px;
-  padding: 0 20px;
 
   font-family: @font-text;
   font-size: 14px;
@@ -55,17 +53,13 @@
 
 @media (min-width: @tablet-width) {
   .categories {
-    width: @tablet-width;
     margin-bottom: 51px;
-    padding: 0 30px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .categories {
-    width: @desktop-width;
     margin-bottom: 79px;
-    padding: 0 40px;
   }
 
   .categories__list {

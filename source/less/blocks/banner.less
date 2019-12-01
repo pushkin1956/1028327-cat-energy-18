@@ -1,6 +1,4 @@
 .banner {
-  padding: 29px 0 22px 0;
-
   font-family: @font-deafult;
   font-size: 14px;
   line-height: 18px;
@@ -16,9 +14,12 @@
   background-position: center top;
 }
 
+.banner__wrapper {
+  .wrapper();
+  padding: 29px 0 22px 0;
+}
+
 .banner__title {
-  width: 280px;
-  margin: 0 auto;
   margin-bottom: 19px;
 
   font-size: 36px;
@@ -27,8 +28,6 @@
 }
 
 .banner__slogan {
-  width: 280px;
-  margin: 0 auto;
   margin-bottom: 20px;
 
   text-transform: uppercase;
@@ -39,8 +38,6 @@
 }
 
 .banner__link {
-  width: 280px;
-  margin: 0 auto;
   padding: 11px 10px 11px 10px;
 
   font-size: 14px;
@@ -52,14 +49,16 @@
     position: relative;
 
     margin: 0 auto;
-    padding: 61px 120px 0 120px;
 
     background-image: none;
   }
 
+  .banner__wrapper {
+    padding: 61px 90px 0 90px;
+  }
+
   .banner__title {
-    width: auto;
-    min-height: 120px;
+    width: 420px;
     margin: 0;
     margin-bottom: 33px;
 
@@ -100,7 +99,10 @@
   .banner {
     margin: 0 auto;
     margin-bottom: 135px;
-    padding: 100px 193px 188px 193px;
+  }
+
+  .banner__wrapper {
+    padding: 100px 83px 188px 83px;
   }
 
   .banner__title {

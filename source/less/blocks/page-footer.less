@@ -1,38 +1,29 @@
 .page-footer {
-  width: @mobile-width;
-  margin: 0 auto;
-
   text-align: center;
 
   background-color: @bg-color;
 }
 
 .page-footer__wrapper {
+  .wrapper();
   padding: 39px 20px 31px 20px;
 }
 
 .page-footer__logo {
-  display: block;
-  width: 128px;
+  display: inline-block;
   margin: 0 auto;
   margin-bottom: 31px;
+
+  vertical-align: middle;
 }
 
 .page-footer__social {
   margin-bottom: 22px;
 }
 
-.page-footer__copyright {
-
-}
-
 @media (min-width: @tablet-width) {
-  .page-footer {
-    width: @tablet-width;
-  }
-
   .page-footer__wrapper {
-    padding: 58px 30px;
+    padding: 58px 0;
     display: flex;
     justify-content: space-between;
   }
@@ -47,11 +38,7 @@
 }
 
 @media (min-width: @desktop-width) {
-  .page-footer {
-    width: @desktop-width;
-  }
-
   .page-footer__wrapper {
-    padding: 60px 110px 56px 110px;
+    padding: 60px 0 56px 0;
   }
 }

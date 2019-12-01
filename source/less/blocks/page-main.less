@@ -1,7 +1,4 @@
 .page-main {
-  width: @mobile-width;
-  margin: 0 auto;
-
   font-family: @font-text;
   font-size: 14px;
   line-height: 18px;
@@ -12,8 +9,7 @@
 }
 
 .page-main__title {
-  margin: 0;
-  padding: 0 20px;
+  .wrapper();
 
   font-family: @font-deafult;
   font-size: 36px;
@@ -35,17 +31,7 @@
 }
 
 @media (min-width: @tablet-width) {
-  .page-main {
-    width: @tablet-width;
-  }
-
   .page-main__title {
     margin-bottom: 74px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .page-main {
-    width: @desktop-width;
   }
 }
