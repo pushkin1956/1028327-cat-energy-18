@@ -46,14 +46,12 @@
 
 @media (min-width: @tablet-width) {
   .banner {
-    position: relative;
-
-    margin: 0 auto;
-
     background-image: none;
   }
 
   .banner__wrapper {
+    display: flex;
+    flex-direction: column;
     padding: 61px 90px 0 90px;
   }
 
@@ -80,14 +78,12 @@
   }
 
   .banner__img {
-    position: absolute;
-    z-index: -1;
+    order: 1;
   }
 
   .banner__link {
     width: 245px;
     margin: 0;
-    margin-bottom: 529px;
     padding: 12px 10px 13px 10px;
 
     font-size: 20px;
@@ -96,13 +92,8 @@
 }
 
 @media (min-width: @desktop-width) {
-  .banner {
-    margin: 0 auto;
-    margin-bottom: 135px;
-  }
-
   .banner__wrapper {
-    padding: 100px 83px 188px 83px;
+    padding: 100px 83px 40px 83px;
   }
 
   .banner__title {
