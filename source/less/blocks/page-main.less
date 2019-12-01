@@ -20,7 +20,7 @@
 }
 
 .page-main__text {
-  margin: 0;
+  .wrapper();
 
   font-family: @font-deafult;
   font-size: 14px;
@@ -33,5 +33,18 @@
 @media (min-width: @tablet-width) {
   .page-main__title {
     margin-bottom: 74px;
+  }
+
+  .page-main__text {
+    padding: 0 320px 0 40px;
+
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-main__text {
+    padding: 0 880px 0 0;
   }
 }
