@@ -81,19 +81,18 @@
 
 @media (min-width: @desktop-width) {
   .example {
-    .wrapper();
     display: flex;
     justify-content: center;
   }
 
   .example__wrapper {
     display: block;
-    width: calc(100% / 2);
+    width: 570px;
     margin: 0;
   }
 
   .example__slider {
-    width: calc(100% / 2);
+    width: (@desktop-width - @desktop-indent * 2) - 570px;
     margin: 0;
   }
 }
