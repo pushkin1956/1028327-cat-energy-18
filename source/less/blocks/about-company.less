@@ -1,15 +1,20 @@
+.about-company {
+  position: relative;
+}
+
 .about-company__contact {
-  background-color: #ffffff;
+  background-color: @white;
 }
 
 @media (min-width: @desktop-width) {
-  .about-company {
-    position: relative;
-  }
-
   .about-company__contact {
+    .wrapper();
     position: absolute;
     top: 95px;
-    left: 110px;
+    right: 0;
+    left: 0;
+    z-index: 1;
+
+    background-color: transparent;
   }
 }

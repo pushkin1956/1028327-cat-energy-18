@@ -11,7 +11,6 @@
 
 .form__fieldset {
   margin: 0;
-  // .wrapper();
   padding: 0;
 
   border: none;
@@ -30,7 +29,7 @@
 }
 
 .form__line {
-  // margin: 0;
+  margin: 0;
 }
 
 .form__input {
@@ -84,17 +83,21 @@
 }
 
 @media (min-width: @tablet-width) {
-  .form__fieldset {
+  .form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     padding: 0 37px 0 40px;
   }
-  .form__wrapper--send {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 40px 0 40px;
+
+  .form__fieldset {
+    width: 100%;
   }
+
   .form__button-send {
     width: 283px;
   }
+
   .form__info {
     width: 283px;
 
@@ -103,19 +106,36 @@
 }
 
 @media (min-width: @desktop-width) {
-  .form__fieldset {
+  .form {
     padding: 0;
   }
-  .form__wrapper--fieldset {
+
+  .form__fieldset--cat {
+    width: 568px;
+  }
+
+  .form__fieldset--program {
+    width: 570px;
+  }
+
+  .form__wrapper {
     display: flex;
-    padding: 0;
+    justify-content: space-between;
   }
-  .form__wrapper--send {
-    padding: 0;
+
+  .form__line {
+    width: 550px;
   }
+
+  .form__list--extra {
+    display: flex;
+    justify-content: space-between;
+  }
+
   .form__button-send {
     width: 568px;
   }
+
   .form__info {
     width: 568px;
   }
