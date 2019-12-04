@@ -817,13 +817,21 @@ img {
   background: none;
   border: none;
 }
+.about-company {
+  position: relative;
+}
 .about-company__contact {
   background-color: #ffffff;
 }
 @media (min-width: 1300px) {
   .about-company__contact {
     margin: 0 auto;
-    position: relative;
+    position: absolute;
+    top: 95px;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    background-color: transparent;
   }
 }
 @media (min-width: 1300px) and (min-width: 320px) {
@@ -895,8 +903,7 @@ img {
 }
 @media (min-width: 1300px) {
   .contact {
-    position: absolute;
-    top: 95px;
+    margin: 0;
     width: 570px;
     padding: 69px 76px 62px 76px;
     background-color: #ffffff;
