@@ -9,15 +9,23 @@
   font-weight: 400;
   font-style: normal;
   text-align: left;
-  color: @text-color;
+  color: @black--lightest;
+
+  &:hover .copyright__icon,
+  &:focus .copyright__icon {
+    fill: @green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .copyright__text {
   margin: 0;
 }
 
-.copyright__link {
-  display: block;
-
-  text-align: right;
+.copyright__icon {
+  fill: @grey--darken;
 }
+

@@ -12,9 +12,18 @@
 .page-footer__logo {
   display: inline-block;
   margin: 0 auto;
-  margin-bottom: 31px;
+  margin-bottom: 27px;
 
   vertical-align: middle;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .page-footer__social {
@@ -26,6 +35,7 @@
     padding: 58px 0;
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 
   .page-footer__logo {
@@ -34,6 +44,10 @@
 
   .page-footer__social {
     margin: 0;
+  }
+
+  .page-footer__copyright {
+    width: 162px;
   }
 }
 

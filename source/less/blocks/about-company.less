@@ -6,6 +6,17 @@
   background-color: @white;
 }
 
+.about-company__map {
+  width: @mobile-width;
+  margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .about-company__map {
+    width: @tablet-width;
+  }
+}
+
 @media (min-width: @desktop-width) {
   .about-company__contact {
     .wrapper();
@@ -13,8 +24,12 @@
     top: 95px;
     right: 0;
     left: 0;
-    z-index: 1;
+    z-index: 3;
 
     background-color: transparent;
+  }
+
+  .about-company__map {
+    width: @desktop-width;
   }
 }
