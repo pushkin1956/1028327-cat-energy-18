@@ -22,13 +22,13 @@
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: -1;
 }
 
 @media (min-width: @tablet-width) {
   .map::before {
-    top: 150px;
-    left: 333px;
+    top: 146px;
+    left: 322px;
 
     width: 113px;
     height: 106px;
@@ -47,7 +47,8 @@
 
 @media (min-width: @desktop-width) {
   .map::before {
-    left: 939px;
+    top: 148px;
+    left: 928px;
   }
 
   .map__google {

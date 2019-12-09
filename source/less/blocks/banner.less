@@ -16,11 +16,12 @@
 
 .banner__wrapper {
   .wrapper();
-  padding: 29px 0 22px 0;
+  padding: 27px 0 22px 0;
 }
 
 .banner__title {
-  margin-bottom: 19px;
+  margin: 0;
+  margin-bottom: 23px;
 
   font-size: 36px;
   line-height: 36px;
@@ -28,13 +29,14 @@
 }
 
 .banner__slogan {
-  margin-bottom: 20px;
+  margin: 0;
+  margin-bottom: 26px;
 
   text-transform: uppercase;
 }
 
 .banner__img {
-  margin-bottom: 3px;
+  margin-bottom: 1px;
 }
 
 .banner__link {
@@ -52,13 +54,13 @@
   .banner__wrapper {
     display: flex;
     flex-direction: column;
-    padding: 61px 90px 0 90px;
+    padding: 33px 89px 0 89px;
   }
 
   .banner__title {
     width: 420px;
     margin: 0;
-    margin-bottom: 33px;
+    margin-bottom: 41px;
 
     font-size: 60px;
     line-height: 60px;
@@ -79,12 +81,14 @@
 
   .banner__img {
     order: 1;
+    // Временно
+    margin-bottom: 259px;
   }
 
   .banner__link {
     width: 245px;
     margin: 0;
-    padding: 12px 10px 13px 10px;
+    padding: 16px 10px 16px 10px;
 
     font-size: 20px;
     line-height: 20px;
@@ -93,7 +97,7 @@
 
 @media (min-width: @desktop-width) {
   .banner__wrapper {
-    padding: 100px 83px 40px 83px;
+    padding: 52px 80px 16px 80px;
   }
 
   .banner__title {
@@ -103,6 +107,13 @@
   .banner__slogan {
     width: 420px;
     margin-bottom: 53px;
+  }
+
+  .banner__img {
+    // Временно
+    width: 260px;
+    height: auto;
+    margin-bottom: 0px;
   }
 
   .banner__link {
