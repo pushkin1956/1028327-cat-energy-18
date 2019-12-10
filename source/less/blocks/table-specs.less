@@ -5,4 +5,29 @@
   font-weight: 400;
   text-align: left;
   color: @text-color;
+
+  border-collapse: collapse;
+}
+
+.table-specs__name,
+.table-specs__value {
+  padding: 0;
+}
+
+.table-specs__value {
+  text-align: right;
+}
+
+@media (min-width: @tablet-width) {
+  .table-specs {
+    font-size: 16px;
+  }
+
+  .table-specs__name,
+  .table-specs__value {
+    padding-top: 8px;
+    padding-bottom: 7px;
+
+    border-bottom: 1px solid @grey;
+  }
 }

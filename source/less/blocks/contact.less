@@ -11,8 +11,6 @@
   font-style: normal;
   text-align: left;
   color: @text-color;
-
-  background-color: @white;
 }
 
 .contact__slogan {
@@ -32,6 +30,10 @@
   margin: 0;
 }
 
+.contact__line-break {
+  display: none;
+}
+
 @media (min-width: @tablet-width) {
   .contact {
     padding: 64px 42px 57px 41px;
@@ -49,6 +51,10 @@
 
     font-size: 16px;
     text-align: right;
+  }
+
+  .contact__line-break {
+    display: inline;
   }
 }
 

@@ -6,6 +6,9 @@
   font-style: normal;
   text-align: left;
   color: @text-color;
+
+  // Для верстки
+  min-height: 965px;
 }
 
 .catalog-extra__title {
@@ -49,6 +52,11 @@
 }
 
 @media (min-width: @tablet-width) {
+  .catalog-extra {
+    // Для верстки
+    min-height: 1025px;
+  }
+
   .catalog-extra__title {
     margin-bottom: 75px;
   }
@@ -59,6 +67,11 @@
 }
 
 @media (min-width: @desktop-width) {
+  .catalog-extra {
+    // Для верстки
+    min-height: 504px;
+  }
+
   .catalog-extra__wrapper {
     display: flex;
     justify-content: space-between;

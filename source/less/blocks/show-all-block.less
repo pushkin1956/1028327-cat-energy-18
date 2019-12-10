@@ -1,5 +1,5 @@
 .show-all-block {
-  padding: 0 27px 25px 20px;
+  padding-top: 79px;
 
   font-family: @font-text;
   font-size: 12px;
@@ -7,10 +7,17 @@
   font-weight: 400;
   text-align: center;
   color: @text-color;
+
+  background-image: url("../../img/icon-plus-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 17%;
+  background-size: 31px 31px;
+
 }
 
 .show-all-block__title {
-  // margin: 0;
+  margin: 0;
+  margin-bottom: 8px;
 
   font-family: @font-deafult;
   font-size: 16px;
@@ -22,19 +29,43 @@
 }
 
 .show-all-block__text {
-  // margin: 0;
+  margin: 0;
+  margin-bottom: 21px;
 }
 
 @media (min-width: @tablet-width) {
   .show-all-block {
     width: 324px;
-    padding: 55px 37px 40px 38px;
+    min-height: 432px;
+    padding: 163px 36px 40px 37px;
+
+    background-image: url("../../img/icon-plus.svg");
+    background-position: 50% 14%;
+    background-size: 61px 61px;
+    border: 1px solid @grey;
+  }
+
+  .show-all-block__title {
+    width: 170px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+
+    font-size: 20px;
+  }
+
+  .show-all-block__text {
+    width: 170px;
+    margin: 0 auto;
+    margin-bottom: 85px;
+
+    font-size: 16px;
+    line-height: 19px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .show-all-block {
     width: 245px;
-    padding: 55px 38px 40px 38px;
+    padding: 163px 38px 40px 37px;
   }
 }
