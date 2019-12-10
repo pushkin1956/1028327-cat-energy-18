@@ -30,10 +30,6 @@
   margin: 0;
 }
 
-.contact__line-break {
-  display: none;
-}
-
 @media (min-width: @tablet-width) {
   .contact {
     padding: 64px 42px 57px 41px;
@@ -51,10 +47,14 @@
 
     font-size: 16px;
     text-align: right;
+
+    &:first-child {
+      margin-bottom: 20px;
+    }
   }
 
   .contact__line-break {
-    display: inline;
+    display: block;
   }
 }
 
