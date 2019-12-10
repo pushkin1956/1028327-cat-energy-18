@@ -7,7 +7,7 @@
   <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="index-page">
 
   <header class="page-header">
     <a class="page-header__logo">
@@ -43,8 +43,13 @@
       <div class="banner__wrapper">
         <h2 class="banner__title">Функциональное питание для котов</h2>
         <p class="banner__slogan">Занялся собой? Займись котом!</p>
-        <img class="banner__img" src="img/index-can-mobile@1x.png" width="280" height="270"
-          alt="Фото продукта Cat Energy PRO 500г в упаковке">
+        <picture>
+            <source media="(min-width:1300px)" srcset="img/index-can-desktop@1x.png">
+            <source media="(min-width:768px)" srcset="img/index-can-tablet@1x.jpg">
+              <img class="banner__img" src="img/index-can-mobile@1x.png" width="280" height="270"
+              alt="Фото продукта Cat Energy PRO 500г в упаковке">
+          </picture>
+
         <a class="banner__link button" href="form.html">Подобрать программу</a>
       </div>
     </section>

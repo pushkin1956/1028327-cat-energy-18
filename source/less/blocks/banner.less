@@ -52,9 +52,11 @@
   }
 
   .banner__wrapper {
+    position: relative;
+
     display: flex;
     flex-direction: column;
-    padding: 33px 89px 0 89px;
+    padding: 27px 89px 0 89px;
   }
 
   .banner__title {
@@ -80,14 +82,19 @@
   }
 
   .banner__img {
-    order: 1;
-    // Временно
-    margin-bottom: 259px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+
+    width: 709px;
+    height: 609px;
   }
 
   .banner__link {
     width: 245px;
     margin: 0;
+    margin-bottom: 529px;
     padding: 16px 10px 16px 10px;
 
     font-size: 20px;
@@ -111,12 +118,17 @@
 
   .banner__img {
     // Временно
-    width: 260px;
-    height: auto;
+    top: -28px;
+    right: 218px;
+    bottom: auto;
+    left: auto;
+
+    width: 552px;
+    height: 499px;
     margin-bottom: 0px;
   }
 
   .banner__link {
-    margin: 0;
+    margin-bottom: 252px;
   }
 }
