@@ -2,7 +2,7 @@
   .wrapper();
   display: flex;
   justify-content: space-between;
-  padding: 33px 0 28px 0;
+  padding: 28px 0 26px 0;
 
   font-family: @font-text;
   font-size: 14px;
@@ -11,8 +11,6 @@
   font-style: normal;
   text-align: left;
   color: @text-color;
-
-  background-color: @white;
 }
 
 .contact__slogan {
@@ -34,7 +32,29 @@
 
 @media (min-width: @tablet-width) {
   .contact {
-    padding: 69px 40px 62px 40px;
+    padding: 64px 42px 57px 41px;
+  }
+
+  .contact__slogan {
+    width: 160px;
+
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .contact__address {
+    width: 168px;
+
+    font-size: 16px;
+    text-align: right;
+
+    &:first-child {
+      margin-bottom: 20px;
+    }
+  }
+
+  .contact__line-break {
+    display: block;
   }
 }
 
@@ -42,8 +62,12 @@
   .contact {
     margin: 0;
     width: 570px;
-    padding: 69px 76px 62px 76px;
+    padding: 62px 76px 57px 76px;
 
     background-color: @white;
+  }
+
+  .contact__address {
+    text-align: left;
   }
 }

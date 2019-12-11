@@ -1,6 +1,6 @@
 .button {
   display: block;
-  padding: 10px 10px 10px 10px;
+  padding: 10px 6px 10px 10px;
 
   font-family: @font-deafult;
   font-size: 16px;
@@ -15,10 +15,28 @@
   background-color: @btn-green-color;
   border: none;
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: @btn-green-color--hvr;
+  }
+
+  &:active {
+    color: fade(@btn-green-text-color, 30);
+  }
 }
 
 .button--grey {
   color: @btn-grey-text-color;
 
   background-color: @btn-grey-color;
+
+  &:hover,
+  &:focus {
+    background-color: @grey--light;
+  }
+
+  &:active {
+    color: fade(@btn-grey-text-color, 30);
+  }
 }

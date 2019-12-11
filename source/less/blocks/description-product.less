@@ -1,6 +1,6 @@
 .description-product {
   .wrapper();
-  margin-bottom: 42px;
+  padding: 17px 0 22px 0;
 
   font-family: @font-text;
   font-size: 14px;
@@ -11,12 +11,9 @@
   color: @text-color;
 }
 
-.description-product__list {
-  .reset-list();
-}
-
 .description-product__title {
   margin: 0;
+  margin-bottom: 28px;
 
   font-family: @font-deafult;
   font-size: 36px;
@@ -25,13 +22,62 @@
   color: @title-color;
 }
 
+.description-product__list {
+  .reset-list();
+}
+
+.description-product__item {
+  position: relative;
+
+  margin-bottom: 20px;
+  padding: 2px 0 4px 80px;
+
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 60px;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+    width: 60px;
+    height: 60px;
+
+    background-color: @green;
+    background-repeat: no-repeat;
+    background-position: 5px 5px;
+  }
+
+  &--healthy::before {
+    background-image: url("../img/advantage-leaf@1x.png");
+  }
+
+  &--easy::before {
+    background-image: url("../img/advantage-powder@1x.png");
+  }
+
+  &--economical::before {
+    background-image: url("../img/advantage-dining@1x.png");
+  }
+
+  &--fast::before {
+    background-image: url("../img/advantage-clock@1x.png");
+  }
+}
+
 @media (min-width: @tablet-width) {
   .description-product {
-    margin-bottom: 11px;
+    padding: 45px 0 12px 0;
   }
 
   .description-product__title {
-    margin-bottom: 20px;
+    margin-bottom: 29px;
+
+    font-size: 60px;
+    line-height: 60px;
   }
 
   .description-product__list {
@@ -42,18 +88,68 @@
 
   .description-product__item {
     width: 324px;
+    min-height: 230px;
     margin-top: 43px;
     margin-bottom: 44px;
+    padding: 112px 70px 10px 0;
+
+    font-size: 16px;
+    line-height: 24px;
+
+    &::before {
+      width: 80px;
+      height: 80px;
+
+      background-position: 15px 15px;
+    }
+
+    &::after {
+      position: absolute;
+      top: -39px;
+      right: 80px;
+      z-index: -1;
+
+      display: block;
+      width: 135px;
+      text-align: center;
+
+      font-family: @font-deafult;
+      font-size: 281px;
+      line-height: 1;
+      color: @grey--lighten;
+  }
+
+    &--1::after {
+      content: "1";
+    }
+
+    &--2::after {
+      content: "2";
+    }
+
+    &--3::after {
+      content: "3";
+    }
+
+    &--4::after {
+      content: "4";
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
   .description-product {
-    margin-bottom: 0;
+    padding: 73px 0 1px 0;
   }
 
   .description-product__item {
-    width: 305px;
+    width: 245px;
     margin-bottom: 24px;
+    padding: 112px 0 10px 0;
+
+
+    &::after {
+      right: 0px;
+    }
   }
 }

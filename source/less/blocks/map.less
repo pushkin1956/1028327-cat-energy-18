@@ -1,3 +1,62 @@
 .map {
   position: relative;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 138px;
+    left: 129px;
+    z-index: 2;
+
+    width: 55px;
+    height: 53px;
+
+    background-image: url("../img/map-pin.png");
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+  }
 }
+
+.map__google {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+@media (min-width: @tablet-width) {
+  .map::before {
+    top: 146px;
+    left: 322px;
+
+    width: 113px;
+    height: 106px;
+  }
+
+  .map__google {
+    width: auto;
+    height: 396px;
+  }
+
+  .map__img {
+    width: auto;
+    height: 396px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .map::before {
+    top: 148px;
+    left: 928px;
+  }
+
+  .map__google {
+    height: 400px;
+  }
+
+  .map__img {
+    height: 400px;
+  }
+}
+
