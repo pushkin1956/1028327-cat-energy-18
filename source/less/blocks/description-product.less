@@ -81,6 +81,8 @@
   }
 
   .description-product__list {
+    counter-reset: number;
+
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -104,6 +106,10 @@
     }
 
     &::after {
+      counter-increment: number;
+
+      content: counter(number);
+
       position: absolute;
       top: -39px;
       right: 80px;
@@ -117,22 +123,6 @@
       font-size: 281px;
       line-height: 1;
       color: @grey--lighten;
-  }
-
-    &--1::after {
-      content: "1";
-    }
-
-    &--2::after {
-      content: "2";
-    }
-
-    &--3::after {
-      content: "3";
-    }
-
-    &--4::after {
-      content: "4";
     }
   }
 }
