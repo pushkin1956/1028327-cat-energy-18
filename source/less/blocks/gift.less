@@ -1,7 +1,9 @@
 .gift {
+  display: flex;
+  align-items: flex-end;
   min-width: 280px;
   min-height: 289px;
-  padding: 43px 60px;
+  padding: 130px 50px 43px 49px;
 
   font-family: @font-text;
   font-size: 16px;
@@ -12,9 +14,16 @@
   color: @white;
 
   background-color: @banner-color;
-  background-image: url("../img/gift-photo-mobile@1x.jpg");
+  background-image:
+    url("../img/icon-gift.svg"),
+    url("../img/gift-photo-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: center;
+  background-size:
+    56px 61px,
+    auto;
+  background-position:
+    center 65px,
+    center;
 }
 
 .gift__text {

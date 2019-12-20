@@ -1,4 +1,6 @@
 .catalog-extra {
+  padding: 27px 0 10px 0;
+
   font-family: @font-text;
   font-size: 14px;
   line-height: 14px;
@@ -13,7 +15,7 @@
 
 .catalog-extra__title {
   .wrapper();
-  margin-bottom: 30px;
+  margin-bottom: 35px;
 
   font-family: @font-deafult;
   font-size: 24px;
@@ -31,8 +33,21 @@
   margin-bottom: 39px;
 }
 
+.catalog-extra__item {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: -1px;
+  padding: 13px 0 17px 0;
+
+  border-top: 1px solid @grey--dark;
+  border-bottom: 1px solid @grey--dark;
+}
+
 .catalog-extra__name-product {
+  width: 100%;
   margin: 0;
+  margin-bottom: 13px;
 
   font-family: @font-deafult;
   font-size: 16px;
@@ -45,10 +60,15 @@
 
 .catalog-extra__value {
   margin: 0;
+  margin-bottom: 15px;
 }
 
 .catalog-extra__price {
   margin: 0;
+}
+
+.catalog-extra__to-order {
+  width: 100%;
 }
 
 @media (min-width: @tablet-width) {
