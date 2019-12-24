@@ -66,15 +66,29 @@
 
   &::-webkit-slider-thumb {
     appearance: none;
-    width: 32px;
-    height: 32px;
-    margin-top: -15px;
+    width: 30px;
+    height: 30px;
+    margin-top: -12px;
 
     background-color: @green;
-    border: 12px solid @white;
+    border: 11px solid @white;
     border-radius: 50%;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+    box-shadow:
+      0 0 0 1px @grey,
+      0 2px 5px 0 rgba(0, 0, 0, 0.15);
     cursor: pointer;
+  }
+
+  &::-webkit-slider-thumb:hover {
+    box-shadow:
+      0 0 0 1px @grey,
+      0 2px 5px 0 rgba(0, 0, 0, 0.25);
+  }
+
+  &::-webkit-slider-thumb:active {
+    box-shadow:
+    0 0 0 2px @green,
+    0 2px 5px 0 rgba(0, 0, 0, 0.25);
   }
 
   &::-webkit-slider-runnable-track {
