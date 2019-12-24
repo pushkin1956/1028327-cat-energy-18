@@ -2,22 +2,12 @@
   position: relative;
 }
 
-.about-company__contact {
-
-  &--index-page {
-    background-color: @white;
-  }
+.about-company__contact--index-page {
+  background-color: @white;
 }
 
 .about-company__map {
-  width: @mobile-width;
   margin: 0 auto;
-}
-
-@media (min-width: @tablet-width) {
-  .about-company__map {
-    width: @tablet-width;
-  }
 }
 
 @media (min-width: @desktop-width) {
@@ -30,9 +20,5 @@
     z-index: 3;
 
     background-color: transparent;
-  }
-
-  .about-company__map {
-    width: @desktop-width;
   }
 }
