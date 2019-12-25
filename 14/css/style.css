@@ -450,9 +450,15 @@ img {
     background-image: url("../img/index-background-desktop@1x.jpg"), -webkit-gradient(linear, left top, right top, color-stop(50vw, transparent), color-stop(50vw, #5eaa2f));
     background-image: url("../img/index-background-desktop@1x.jpg"), linear-gradient(to right, transparent 50vw, #5eaa2f 50vw);
     background-repeat: no-repeat;
-    background-position: 50vw 0,
+    background-position: right 0,
       50% 0;
     background-size: auto 696px;
+  }
+}
+@media (min-width: 1300px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1300px) and (min-resolution: 144dpi), (min-width: 1300px) and (min-resolution: 1.5dppx) {
+  .index-page {
+    background-image: url("../img/index-background-desktop@2x.jpg"), -webkit-gradient(linear, left top, right top, color-stop(50vw, transparent), color-stop(50vw, #5eaa2f));
+    background-image: url("../img/index-background-desktop@2x.jpg"), linear-gradient(to right, transparent 50vw, #5eaa2f 50vw);
   }
 }
 .page-main {
@@ -556,6 +562,12 @@ img {
   background-image: url("../img/index-background-mobile@1x.jpg"), linear-gradient(#64a83b 0, #64a83b 305px, transparent 305px);
   background-repeat: no-repeat;
   background-position: center top;
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .banner {
+    background-image: url("../img/index-background-mobile@2x.jpg"), linear-gradient(#64a83b 0, #64a83b 305px, transparent 305px);
+    background-size: auto 305px;
+  }
 }
 .banner__wrapper {
   margin: 0 auto;
