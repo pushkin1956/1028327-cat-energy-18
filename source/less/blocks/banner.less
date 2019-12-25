@@ -12,6 +12,13 @@
     linear-gradient(@banner-color 0, @banner-color 305px, transparent 305px);
   background-repeat: no-repeat;
   background-position: center top;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image:
+      url("../img/index-background-mobile@2x.jpg"),
+      linear-gradient(@banner-color 0, @banner-color 305px, transparent 305px);
+      background-size: auto 305px;
+  }
 }
 
 .banner__wrapper {
