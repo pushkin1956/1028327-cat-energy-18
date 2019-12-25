@@ -5,8 +5,14 @@
       linear-gradient(to right, transparent 50vw, @green--dark 50vw);
     background-repeat: no-repeat;
     background-position:
-      50vw 0,
+      right 0,
       50% 0;
     background-size: auto 696px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image:
+        url("../img/index-background-desktop@2x.jpg"),
+        linear-gradient(to right, transparent 50vw, @green--dark 50vw);
+    }
   }
 }
