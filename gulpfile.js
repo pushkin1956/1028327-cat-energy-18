@@ -6,25 +6,17 @@ var sourcemap = require("gulp-sourcemaps");
 var less = require("gulp-less");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
+var csso = require("gulp-csso");
 var server = require("browser-sync").create();
 var del = require("del"); // модуль для удаления
+var rename = require("gulp-rename"); // модуль для переименования
+var svgstore = require("gulp-svgstore"); // модель для создания векторного спрайта
 var imagemin = require("gulp-imagemin"); // Модуль для оптимизации изображений
 var webp = require("gulp-webp"); // Модуль для создания WebP
 var posthtml = require("gulp-posthtml"); // Модуль обработки html
 var include = require("posthtml-include"); // Модель вставки в html
 
 
-
-// Оптимизация изображений - npx gulp images
-gulp.task("images", function () {
-  return gulp.src("source/img/**/*.{png,jpg,svg}")
-    .pipe(imagemin([
-      imagemin.optipng({optimizationLevel: 3}),
-      imagemin.jpegtran({progressive: true}),
-      imagemin.svgo()
-]))
-    .pipe(gulp.dest("source/img"));
-});
 
 // Создаем WebP изображения - команда npx gulp webp
 gulp.task("webp", function () {
@@ -80,7 +72,7 @@ gulp.task("css", function () {
 
 // Создаем SVG спрайт
 gulp.task("sprite", function () {
-  return gulp.src("source/img/icon-*.svg") // Выбрать то что надо
+  return gulp.src("source/img/sprite-*.svg") // Выбрать то что надо
     .pipe(svgstore({
       inlineSvg: true
     }))
@@ -97,7 +89,16 @@ gulp.task("html", function () {
     .pipe(gulp.dest("build"));
 });
 
-// Добавить шаблон в HTML
+// Оптимизация изображений - npx gulp images
+gulp.task("images", function () {
+  return gulp.src("build/img/**/*.{png,jpg,svg}")
+    .pipe(imagemin([
+      imagemin.optipng({optimizationLevel: 3}),
+      imagemin.jpegtran({progressive: true}),
+      imagemin.svgo()
+]))
+    .pipe(gulp.dest("build/img"));
+});
 
 // Запускаем билд
 gulp.task("build", gulp.series(
@@ -105,7 +106,8 @@ gulp.task("build", gulp.series(
   "copy",
   "css",
   "sprite",
-  "html"
+  "html",
+  "images"
 ));
 
 gulp.task("server", function () {
