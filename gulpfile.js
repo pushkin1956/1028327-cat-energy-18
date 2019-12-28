@@ -47,7 +47,7 @@ gulp.task("css", function () {
     .pipe(rename("style.min.css")) // переименовываем в min.файл
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/css")) // Записываем в директорию
-    // .pipe(server.stream()); // неизвестная команда
+    .pipe(server.stream()); // неизвестная команда
 });
 
 // Создаем SVG спрайт
