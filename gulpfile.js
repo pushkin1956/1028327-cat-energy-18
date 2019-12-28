@@ -17,25 +17,6 @@ var posthtml = require("gulp-posthtml"); // Модуль обработки html
 var include = require("posthtml-include"); // Модель вставки в html
 
 
-
-// Создаем WebP изображения - команда npx gulp webp
-gulp.task("webp", function () {
-  return gulp.src("source/img/**/*.{png,jpg}")
-    .pipe(webp({quality: 90}))
-    .pipe(gulp.dest("source/img"));
-});
-
-// Вставка спрайта в html
-gulp.task("html", function () {
-  return gulp.src("source/*.html")
-    .pipe(posthtml([
-      include()
-    ]))
-    .pipe(gulp.dest("source"));
-});
-
-
-
 // Удаление файлов из build
 gulp.task("clean", function () {
   return del("build");
@@ -65,14 +46,13 @@ gulp.task("css", function () {
     .pipe(csso()) // минифицирует CSS scco
     .pipe(rename("style.min.css")) // переименовываем в min.файл
     .pipe(sourcemap.write("."))
-    // .pipe(gulp.dest("source/css"))
     .pipe(gulp.dest("build/css")) // Записываем в директорию
-    // .pipe(server.stream()); // команды нет в примере
+    // .pipe(server.stream()); // неизвестная команда
 });
 
 // Создаем SVG спрайт
 gulp.task("sprite", function () {
-  return gulp.src("source/img/sprite-*.svg") // Выбрать то что надо
+  return gulp.src("source/img/sprite-*.svg") // Выбрать определенные svg
     .pipe(svgstore({
       inlineSvg: true
     }))
@@ -80,7 +60,7 @@ gulp.task("sprite", function () {
     .pipe(gulp.dest("build/img"));
 });
 
-// Шаблон PostHTML
+// Вставка спрайта в html
 gulp.task("html", function () {
   return gulp.src("source/*.html")
     .pipe(posthtml([
@@ -100,6 +80,13 @@ gulp.task("images", function () {
     .pipe(gulp.dest("build/img"));
 });
 
+// Создаем WebP изображения - команда npx gulp webp
+gulp.task("webp", function () {
+  return gulp.src("source/img/**/*.{png,jpg}")
+    .pipe(webp({quality: 90}))
+    .pipe(gulp.dest("build/img"));
+});
+
 // Запускаем билд
 gulp.task("build", gulp.series(
   "clean",
@@ -107,12 +94,13 @@ gulp.task("build", gulp.series(
   "css",
   "sprite",
   "html",
-  "images"
+  "images",
+  "webp"
 ));
 
 gulp.task("server", function () {
   server.init({
-    server: "build/", // поменял директорию
+    server: "build/",
     notify: false,
     open: true,
     cors: true,
@@ -120,8 +108,7 @@ gulp.task("server", function () {
   });
 
   gulp.watch("source/less/**/*.less", gulp.series("css"));
-  gulp.watch("source/img/icon-*.svg", gulp.series("sprite", "html", "refresh")); // добавил перезагрузку
-  // gulp.watch("source/*.html").on("change", server.reload);
+  gulp.watch("source/img/sprite-*.svg", gulp.series("sprite", "html", "refresh")); // добавил перезагрузку
   gulp.watch("source/*.html", gulp.series("html", "refresh"));
 });
 
@@ -131,5 +118,4 @@ gulp.task("refresh", function (done) {
   done();
 });
 
-// gulp.task("start", gulp.series("css", "server"));
 gulp.task("start", gulp.series("build", "server"));
